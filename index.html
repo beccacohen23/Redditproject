@@ -12,6 +12,13 @@ LLMs and AIs have built in “guardrails” developers use to censor “hateful 
 </p>
       <p> LLMs and AIs have built in “guardrails” developers use to censor “hateful language” in order to protect minority groups from harmful speech; however, this same process can also censor creators from these communities. For example, the word “queer” can be used as a slur against or as an identifier within LGBTQ+ communities (Stochastic Parrots). We will compare these communities’ language usages and structures(ex: Park et. al).  We also aim to examine some limitations of how automation might misclassify examples from r/queer based on language similarities between the communities. Such information could potentially be helpful for creating a more accurate model that of automated moderating that is less likely to censor queer creators and more likely to accurately identify community violations or other harmful speech.
       </p>
+       <h1>The Dataset</h1>
+      <p> As Reddit is often speculated to be AI training data, we will collect posts from specific relevant communities sub-reddits using the Reddit API.
+Using the Reddit API, we searched for “hot” and “new” post titles containing the word gay, for both r/queer and r/TheRedPill separately. The text outputs for each thread were saved as a text csv and put separately into the topic modeling (using the link on canvas). Next, we iterated through and created a dictionary that contained the source, and the text of the post. This dictionary was then put through the BERT for Humanists Fine Tuning Classification notebook, in order to see what sorts of language clues the LLM would use to distinguish between language in the hateful community vs in the supportive community. All of this work was done using Python in GoogleColab.
+We are taking a random sample of 3919 posts, half from each reddit thread. 
+Additionally, a potential limitation is that perhaps not all posts in r/TheRedPill are hateful, or that hateful posts exist in r/queer, and thus these are simply proxies for hateful vs supportive communities based on these communities intent (as indicated on
+ their about page). 
+<p/>
     </div>
     <div class="section" id="section2">
       <h1>Topic Modeling</h1>
