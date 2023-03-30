@@ -21,8 +21,7 @@ jobs:
         
   url: "http://beccacohen23.github.io/Redditproject"
 baseurl: "/Redditproject"
-	<title>Scrollie Website</title>
-	<style>
+title: Scrollie Website</title>
 		body {
 			margin: 0;
 			padding: 0;
